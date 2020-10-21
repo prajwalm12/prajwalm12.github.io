@@ -238,7 +238,7 @@ div.content {
 .column {
   float: left;
   width: 20.33%;
-  padding: 5px;
+  padding: 10px;
 }
 
 .column1 {
@@ -330,7 +330,7 @@ div.content {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 17px;  
 }
 
 .topnav a:hover {
@@ -352,11 +352,12 @@ div.content {
   .topnav a.icon {
     float: right;
     display: block;
+	z-index: 9999;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: fixed; z-index: 9999;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -364,7 +365,7 @@ div.content {
   }
   .topnav.responsive a {
     float: none;
-    display: block;
+    display: block;	
     text-align: left;
   }
 }
@@ -382,23 +383,23 @@ div.content {
   <script src="main.js"></script>
 </head>
 <body>
-
-    <div class = "topnav" id="myTopnav">  	
+<div class = "topnav" id="myTopnav">  	
 <div id="menu-center">
-<a href ="#home">Home</a>
-<a href ="#about">About</a>
-<a href ="#skills">Skills</a>
-<a href ="#education">Education</a>
-<a href ="#experince">Experience</a>
-<a href ="#achievements">Achievements</a>
-<a href ="#contact">Contact</a>
+<a href ="#home" onclick="myFunction()">Home</a>
+<a href ="#about" onclick="myFunction()">About</a>
+<a href ="#skills" onclick="myFunction()">Skills</a>
+<a href ="#education" onclick="myFunction()">Education</a>
+<a href ="#experince" onclick="myFunction()">Experience</a>
+<a href ="#achievements" onclick="myFunction()">Achievements</a>
+<a href ="#projects" onclick="myFunction()">Personal Projects</a>
+<a href ="#contact" onclick="myFunction()">Contact</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a> </div> 
 	</div>
 <div class="content"> 
 <div id = "home" >
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class = "active"></li>
@@ -415,7 +416,7 @@ div.content {
 		<div class="carousel-content">
 		<h1 style="font-size:4vw;">Hi!</h1>
 		<h1 style="font-size:4vw;">I'm Prajwal</h1>		
-		<a href="#"><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
+		<a href="C:\Users\mredd110\GitRepo\My-Website\MyPersonalWebsite\Resume.pdf" target="_blank"  download><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
 		</div>		 
       </div>
 
@@ -425,7 +426,7 @@ div.content {
 		<div class="carousel-content">
 		<h1 style="font-size:4vw;">I am</h1>
 		<h1 style="font-size:4vw;">a Software Developer</h1>
-		<a href="#"><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
+		<a href="C:\Users\mredd110\GitRepo\My-Website\MyPersonalWebsite\Resume.pdf" target="_blank"  download><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
         </div>
       </div>      
     </div>
@@ -436,22 +437,62 @@ div.content {
 </br></br></br></br>
 <p class = "sansserif"><b><strong>W H O A M I ?</strong></b></p>
 <p>Experienced Software Engineer with a demonstrated history of working in the Information Technology & Services industry. Skilled in problem solving ,coding. Strong engineering professional with a Bachelor of Technology (B.Tech.) focused in Computer Science from Jawaharlal Nehru Technological University.Experienced Software Engineer with a demonstrated history of working in the Information Technology & Services industry. Skilled in problem solving ,coding. Strong engineering professional with a Bachelor of Technology (B.Tech.) focused in Computer Science from Jawaharlal Nehru Technological University. </p>
-<div class = "row">
-<div class = "column1">
-<div class = "square1">
-<i class="fa fa-mobile" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Application</p></i>
-</div>
-</div>
-<div class = "column1">
-<div class = "square1">
-<i class="fa fa-globe" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Web</p></i>
-</div>
-</div>
-<div class = "column1">
-<div class = "square1">
-<i class="fa fa-database" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Software</p></i>
-</div>
-</div>
+<!-- <div class = "row"> -->
+<!-- <div class = "column1"> -->
+<!-- <div class = "square1"> -->
+<!-- <i class="fa fa-mobile" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Application</p></i> -->
+<!-- <img src = > -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "column1"> -->
+<!-- <div class = "square1"> -->
+<!-- <i class="fa fa-globe" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Web</p></i> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "column1"> -->
+<!-- <div class = "square1"> -->
+<!-- <i class="fa fa-database" style="font-size:15vh;color:red" align = "center"><p style = "font-size:5vh;">Software</p></i> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columnimg {
+  float: left;
+  width: 25%;
+  height:80%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.rowimg::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .columnimg {
+    width: 100%;
+  }
+}
+</style>
+<div class="rowimg">
+  <div class="columnimg">
+    <img src="images/DS.JPG" alt="Snow" style="width:100%">
+  </div>
+  <div class="columnimg">
+    <img src="images/App1.JPG" alt="Forest" style="width:100%">
+  </div>
+  <div class="columnimg">
+    <img src="images/Dist.JPG" alt="Mountains" style="width:100%">
+  </div>
+  <div class="columnimg">
+    <img src="images/Web.JPG" alt="Mountains" style="width:100%">
+  </div>
 </div>
 </div>
 <div id = "skills">
@@ -463,8 +504,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>C/C++</strong></p>
 <div class="progress">
-    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">   
+	<span class = "show">75%</span>	
     </div>
   </div>
  </td>
@@ -472,8 +513,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>Java</strong></p>
   <div class="progress">
-    <div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">      
+	<span class = "show">90%</span>	
     </div>
 	</div>	
 </td>
@@ -483,8 +524,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>SQL</strong></p>
 <div class="progress">
-    <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+      <span class = "show">90%</span>
     </div>
   </div>
  </td>
@@ -492,8 +533,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>Hadoop</strong></p>
   <div class="progress">
-    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+      <span class = "show">85%</span>
     </div>
 	</div>	
 </td>
@@ -503,8 +544,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>SAP</strong></p>
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%"> 
+      <span class = "show">75%</span>
     </div>
   </div>
  </td>
@@ -512,8 +553,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>Docker</strong></p>
   <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%"> 
+      <span class = "show">80%</span>
     </div>
 	</div>	
 </td>
@@ -523,7 +564,7 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>Kubernates</strong></p>
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
       <span class = "show">80%</span>
     </div>
   </div>
@@ -532,8 +573,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>Spring</strong></p>
   <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+      <span class = "show">85%</span>
     </div>
 	</div>	
 </td>
@@ -543,8 +584,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>Hibernate</strong></p>
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+      <span class = "show">90%</span>
     </div>
   </div>
  </td>
@@ -552,8 +593,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>Spark</strong></p>
   <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+      <span class = "show">85%</span>
     </div>
 	</div>	
 </td>
@@ -563,8 +604,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>MicroServices</strong></p>
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+      <span class = "show">85%</span>
     </div>
   </div>
  </td>
@@ -572,8 +613,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>NoSQL</strong></p>
   <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+      <span class = "show">75%</span>
     </div>
 	</div>	
 </td>
@@ -583,8 +624,8 @@ div.content {
 <td style="width: 400px; height:2%">
 <p><strong>Linux</strong></p>
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      <span class = "show">80%</span>
+    <div class="progress-bar bg-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      <span class = "show">70%</span>
     </div>
   </div>
  </td>
@@ -592,8 +633,8 @@ div.content {
  <td style="width: 400px; height:2%">
  <p><strong>JavaSript</strong></p>
   <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-      50% Complete (info)
+    <div class="progress-bar bg-info progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+      <span class = "show">80%</span>
     </div>
 	</div>	
 </td>
@@ -614,7 +655,8 @@ div.content {
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <p>JNTU COLLAGE OF ENGINEERING HYDERABAD</br>Year : 2013-2017</br>Percentage : 82%</p>
+					<p>Graduated from the best institue in the state of Andhra Pradesh/Telangana</p>							
+					<p>JNTU COLLAGE OF ENGINEERING HYDERABAD</br>Year : 2013-2017</br>Percentage : 82%</p>
                 </div>
             </div>
         </div>
@@ -625,7 +667,7 @@ div.content {
                 </h2>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
+                <div class="card-body">					
                     <p>SRI CHAITANYA JUNIOR COLLAGE</br>Year : 2011-2013</br>Percentage : 98%</p>
                 </div>
             </div>
@@ -667,6 +709,7 @@ function myFunction() {
   } else {
     x.className = "topnav";
   }
+  x.toggle();
 }
 </script>
  </div>
@@ -680,7 +723,7 @@ function myFunction() {
 <i class="fa fa-pencil-square" style="font-size:8vh;color:blue"></i>
 </td>
 <td style = "background-color:	#F0F0F0;">
-<h4><a href="#">Software Engineer</a> <span>Nov 2018-Present</span></h4>
+<h4><a href="#" style="text-decoration:none;color: darkblue;">Software Engineer</a> <span>Nov 2018-Present</span></h4>
 </td></tr>
 <tr><td></td><td style = "background-color:	#F0F0F0;">•	Working with Analytics Platform team</td></tr>
 <tr><td></td><td style = "background-color:#F0F0F0">•	Worked on development of platform for processing multiple analytics . Built using Cascading/MapReduce framework ,the platform enables users to process huge volumes of data </td></tr>
@@ -699,7 +742,7 @@ function myFunction() {
 <td>
 <i class="fa fa-pencil-square" style="font-size:8vh;color:red"></i>
 </td>
-<td style = "background-color:	#F0F0F0;"><h4><a href="#">Associate App Developer</a> <span>June 2017- Nov 2018</span></h4></td></tr>
+<td style = "background-color:	#F0F0F0;"><h4><a href="#" style="text-decoration:none;color: darkblue;">Associate App Developer</a> <span>June 2017- Nov 2018</span></h4></td></tr>
 <tr><td></td><td style = "background-color:	#F0F0F0;">•	Worked on an application CA Trials that allows the user to use products on trial basis. Implemented using Spring framework ,developed several RESTful WebServices which included  making api calls to Salesforce and SAP</td></tr>
 <tr><td></td><td style = "background-color:	#F0F0F0;">•	Developed audit logging reports , enhacements of SAP features to support the business.</td></tr>
 </table>
@@ -709,7 +752,7 @@ function myFunction() {
 <td>
 <i class="fa fa-pencil-square" style="font-size:8vh;color:green"></i>
 </td>
-<td style = "background-color:	#F0F0F0;"><h4><a href="#">Software Engineer - Intern</a> <span>Jan 2017-May 2017</span></h4></td></tr>
+<td style = "background-color:	#F0F0F0;"><h4><a href="#" style="text-decoration:none;color: darkblue;">Software Engineer - Intern</a> <span>Jan 2017-May 2017</span></h4></td></tr>
 <tr><td></td><td style = "background-color:	#F0F0F0;">• Development of DataSecurity product to encrypt confidential data stored in local drives and cloud. Impemented in C# the product uses a number of encryption algorithms for encrypting the data in cloud accesed using Oauth2 protocols and cloud api</td></tr></table>
 </br>
 </div>
@@ -719,11 +762,48 @@ function myFunction() {
 </br></br>
 <p>•	Bravo Award : - Performance bonus award for making much appreciated ‘above and beyond’ contribution to Analytics Platform Team.</br>
 •	Spot Award : Appreciation from Business for significant contribution and resolution of prod issues in time.</br>
-•	Competitive programmer with a golden batch in Algorithms domain in Hackerrank.</br>
+•	Competitive programmer with a golden batch in Algorithms domain in Hackerrank.</br></br>
+<img src="images/Hackerrank.jpg" style="width:70%;display: block;margin-left: auto;margin-right: auto;" ></img>
 •	Consistently maintained a rank in the top 10 among 160 students in the department during my bachelor’s program.</br>
 •	 Secured a rank of 1017 among 3,96,143 students in EAMCET 2013.</br>
-•	Jumbled Code - Runners up in the event conducted by Osmania University as a part of their annual fest. Computer science department of University College of Engineering, Osmania University, as part of their annual level technical fest ‘Infinity 2016’.</br>
-<p>
+•	Jumbled Code - Runners up in the event conducted by Osmania University as a part of their annual fest. Computer science department of University College of Engineering, Osmania University, as part of their annual level technical fest ‘Infinity 2016’.
+</br></br>
+<img src="images/Cer.jpg" style="width:70%;display: block;margin-left: auto;margin-right: auto;" ></img>
+</p>
+</div>
+<div id = "projects">
+</br></br></br></br>
+<h2>MY PROJECTS</h2>
+</br></br>
+<p>•	<strong>AIRBNB DATA ANALYSIS</strong>: An Application that would analyse AirBnb datasets and generate Statistics. This Statistics derived help in making decisions to improve business</br>
+Technologies Used : Apache Spark,Java,Avro
+<table><tr><td style="padding:10px;">
+<i class="fa fa-github" style="font-size:6vh"></i>
+</td>
+<td style="text-align:center;vertical-align: middle;">
+<a href = "https://github.com/prajwalm12/AirBnb-DataAnalysis" target = "_blank" style="text-decoration:none;color: darkblue;">GitHub Link</a>
+</td>
+</tr>
+</table>
+•	<strong>MY TODO</strong>: An application which helps users to create,edit,delete and list their Todos</br>
+Technologies Used : MongoDB,Node.js,Express.js
+<table><tr><td style="padding:10px;">
+<i class="fa fa-github" style="font-size:6vh"></i></td>
+<td style="text-align:center;vertical-align: middle;">
+<a href = "https://github.com/prajwalm12/MyToDo" target = "_blank" style="text-decoration:none;color: darkblue;">GitHub Link</a>
+</td>
+</tr>
+</table>
+•	<strong>BEYOND COMPARE</strong> : An Application used for comparing large files </br>
+Technologies Used : Apache Spark,Java,Spark SQL
+<table><tr><td style="padding:10px;">
+<i class="fa fa-github" style="font-size:6vh"></i></td>
+<td style="text-align:center;vertical-align: middle;">
+<a href = "https://github.com/prajwalm12/BeyondCompare" target = "_blank" style="text-decoration:none;color: darkblue;">GitHub Link</a>
+</td>
+</tr>
+</table>
+</p>
 </div>
 <style>
 .img-holder {
@@ -757,13 +837,13 @@ function myFunction() {
    left: 50%;
    transform: translate(-50%, -50%);
 }
-
-.fa-phone {
+.fa-globe {
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
+
 .fa-mobile {
    position: absolute;
    top: 50%;
@@ -804,12 +884,12 @@ function myFunction() {
 <div class = "row">
 <div class = "column">
 <div class = "square">
-<i class="fa fa-phone" style="font-size:48px;color:red" align = "center"></i>
+<i class="fa fa-github" style="font-size:48px;color:red;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" align = "center"></i>
 </div>
 </div>
 <div class = "column">
 </br></br>
-<p>9676567092</p>
+<a href = "https://github.com/prajwalm12/" style="text-decoration:none;color: darkblue;" target = "_blank">https://github.com/prajwalm12/</a>
 </div>
 </div>
 <div class = "row">
@@ -820,7 +900,7 @@ function myFunction() {
 </div>
 <div class = "column">
 </br></br>
-<p>https://www.linkedin.com/in/sai-prajwal-reddy-35395210b/</p>
+<a href = "https://www.linkedin.com/in/sai-prajwal-reddy-35395210b/" style="text-decoration:none;color: darkblue;" target = "_blank">https://www.linkedin.com/in/sai-prajwal-reddy-35395210b/</a>
 </div>
 </div>
 </div>
