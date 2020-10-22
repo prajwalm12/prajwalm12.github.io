@@ -1,381 +1,20 @@
 <!doctype html>
-<style>
-body {  
-    margin: 0px;  
-    padding: 0px;  
-}  
-
-/* h1 tag style */  
-h1 {  
-    margin: 0px;  
-    padding: 0px;  
-    font-family: arial;  
-    font-size: 180%;  
-    color: #000000;  
-}  
-
-/* CSS Style Rule for Div having id="outer-container" */  
-/* outer-container will hold the whole assembly of  
-   nested div overlays. */  
-/* It will also center align the design */  
-#outer-container {  
-    width: 1200px;  
-    margin: 0 auto;  
-}  
-
-/* footer CSS Style Rule */  
-#header {  
-    width: 990px;  
-    height: 90px;  
-    background-color: blue;  
-}  
-
-/* footer CSS Style Rule */  
-#footer {  
-    width: 990px;  
-    background-color: red;  
-}  
-
-/* content-container CSS Style Rule */  
-/* It will hold the main content of the page. */  
-/* it is the right side column */  
-/* in this 2 columns div layout */  
-
-/* left side navigation that is the left side column of */  
-/* 2 columns div layout */  
-#left-nav {  
-    width: 19%;  
-    height: 600px;  
-    background-color: gray;  
-    margin: 0px 0px 0px 0px;  
-    float: left;  
-	position : fixed;
-}
-#left-nav li {  
-    color: red;  
-}  
-
-/* Top navigation CSS Style Rule */  
-#top-Nav {  
-    width: 990px;  
-    background-color: black;  
-    margin: 2px 0px 0px 0px;  
-} 
-
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a.specialeffects:hover {  
-  text-decoration: underline;  
-}
-
-ul {
-    border-left: 6px solid #5e37bc;
-    background-color: #bdbdae;
-    color: white;
-   list-style-type: none;
-   padding: 11px 21px;
-   text-align: center;
-}
-
-li{
-  margin: 10px 0;
-  align: center;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;  
-}
-
-#home {
-    background-color: white;
-        
-    
-}
-#education {
-    background: white; 
-    margin: 5px 0px 0px 0px;  
-    width: 100%;
-}
-#experince {
-    background: white;     
-    width: 100%;
-}
-#about {
-    background-color: white;
-    width: 100%;
-}
-#skills {
-    background-color: white;
-    margin: 5px 0px 0px 0px;  
-    width: 100%;
-}
-#achievements {
-    background-color: white;    
-    width: 100%;
-}
-#contact {
-    background-color: white;    
-    width: 100%;
-}
-  
-/*.progress-bar > span {
-    text-indent: 120px;
-    position: absolute;
-    color: black;
-	font-size:20px;
-}*/
-
-#first {
-    width: 50px;
-    float: left;
-    height: 50px;
-        background-color: white;
-}
-#second {
-    width: 800px;
-    float: right;
-    height: 300px;
-    background-color: white;
-}
-.vl {
-  border-left: 6px solid green;
-  height: 50px;
-}
-.carousel-content {
-  position: absolute;
-  bottom: 50%;
-  left: 5%;
-  z-index: 20;
-  color: black;
-  text-shadow: 0 1px 2px rgba(0,0,0,.6);
-}
-
-.sansserif {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  position: relative;
-  
-  left: 16px;
-}
-
-.sansserif1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  position: relative;
-  top: 60px;
-  left: 16px;
-}
-.paddingBetweenCols td
-{
-    padding:0 15px;
-}
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 230px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-div.content {
-  margin-left: 240px;
-  padding: 1px 16px;
-  margin-top:50px
-  
-}
-
-@media screen and (max-width: 1500px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-  
-   #one { 
-    float: none;
-    margin-right:0;
-    width:auto;
-    border:0;
-    border-bottom:2px solid #000;    
-  }
-}
-.column {
-  float: left;
-  width: 20.33%;
-  padding: 10px;
-}
-
-.column1 {
-  float: right;
-  width: 30.33%;
-  padding: 100px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
- 
-.bs-example{
-        margin: 20px;
-    }
-.accordion .fa{
-        margin-right: 0.5rem;
-    }
-.vl {
-  border-left: 6px solid green;
-  height: 500px;
-}
-.square {
-    background: #F0F0F0;
-    width: 5vw;
-    height: 5vw;
-}
-
-.square1 {
-    background: #F0F0F0;
-    width: 10vw;
-    height:10vw;
-}
-.square h1 {
-    color: #fff;
-}
-
-.add-img-button {
-  color: #8abe57;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5em;
-}
-.myDiv {
-  height: 40vh;
-  width: 40vh;  
-  display: inline-block;
-  background-color: #F0F0F0;
-  margin-bottom: 25px;
-}
-
-/* The block of code below tells the browsers what to do on a screen that has a width of 320px or less */
-
-@media screen and (max-width: 320px) {
-  
-  .myDiv {
-  width: 90%;
-  display: block; /* Stops it from floating */
-  margin: auto; /* Ensures that it is centered */
-  margin-bottom: 25px; /* Space between the stacked elements */
-    
-  }
-  
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  z-index: 9999;
-  top:0;
-  width:100%;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;  
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-	z-index: 9999;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: fixed; z-index: 9999;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;	
-    text-align: left;
-  }
-}
-</style>
 <html>
 <head>
  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/achievements.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -415,7 +54,8 @@ div.content {
         </div>
 		<div class="carousel-content">
 		<h1 style="font-size:4vw;">Hi!</h1>
-		<h1 style="font-size:4vw;">I'm Prajwal</h1>		
+		<h1 style="font-size:4vw;">I'm Prajwal</h1>	
+		</br>
 		<a href="/files/Resume.pdf" target="_blank"  download><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
 		</div>		 
       </div>
@@ -425,7 +65,7 @@ div.content {
         <div class="carousel-caption"></div>
 		<div class="carousel-content">
 		<h1 style="font-size:4vw;">I am</h1>
-		<h1 style="font-size:4vw;">a Software Developer</h1>
+		<h1 style="font-size:4vw;">a Software Developer</h1></br>
 		<a href="/files/Resume.pdf" target="_blank"  download><button type="button" class="btn btn-light">DOWNLOAD CV</button></a>
         </div>
       </div>      
@@ -437,31 +77,6 @@ div.content {
 </br></br></br></br>
 <p class = "sansserif"><b><strong>W H O A M I ?</strong></b></p>
 <p>Experienced Software Engineer with a demonstrated history of working in the Information Technology & Services industry. Skilled in problem solving ,coding. Strong engineering professional with a Bachelor of Technology (B.Tech.) focused in Computer Science from Jawaharlal Nehru Technological University.Experienced Software Engineer with a demonstrated history of working in the Information Technology & Services industry. Skilled in problem solving ,coding. Strong engineering professional with a Bachelor of Technology (B.Tech.) focused in Computer Science from Jawaharlal Nehru Technological University. </p>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.columnimg {
-  float: left;
-  width: 25%;
-  height:80%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.rowimg::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-@media screen and (max-width: 500px) {
-  .columnimg {
-    width: 100%;
-  }
-}
-</style>
 <div class="rowimg">
   <div class="columnimg">
     <img src="images/DS.JPG" alt="Snow" style="width:100%">
@@ -668,32 +283,6 @@ div.content {
         </div>
     </div>
 </div>
-  <script>
-    $(document).ready(function(){
-        // Add minus icon for collapse element which is open by default
-        $(".collapse.show").each(function(){
-        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
-        });
-        
-        // Toggle plus minus icon on show hide of collapse element
-        $(".collapse").on('show.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
-        }).on('hide.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
-        });
-    });
-</script>
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-  x.toggle();
-}
-</script>
  </div>
 <div id = "experince">
 </br></br></br></br>
@@ -787,65 +376,6 @@ Technologies Used : Apache Spark,Java,Spark SQL
 </table>
 </p>
 </div>
-<style>
-.img-holder {
-  width: 20vh;
-  height: 20vh;
-  border: 2vh dotted #8abe57;
-  border-radius: 0.25rem;
-  display: flex;
-}
-
-.img-holder i {
-  margin: auto;
-  font-size: 30vh;
-}
-.square {
-    background: #F0F0F0;
-    width: 10vw;
-    height: 10vw;
-	position: relative;
-}
-
-.square1 {
-    background: white;
-    width: 15vw;
-    height: 15vw;
-	position: relative;
-}
-.fa-globe {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-.fa-globe {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-.fa-mobile {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-.fa-database {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-.fa-linkedin-square {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-</style>
 <div id = "contact">
 </br></br>
 <h2>GET IN TOUCH</h2>
@@ -855,33 +385,32 @@ Technologies Used : Apache Spark,Java,Spark SQL
 <div class = "row">
 <div class = "column">
 <div class = "square">
-<i class="fa fa-globe" style="font-size:48px;color:red" align = "center"></i>
+<i class="fa fa-globe" style="font-size:10vh;color:red" align = "center"></i>
 </div>
 </div>
 <div class = "column">
-</br></br>
 <p>saiprajwalreddy95@gmail.com</p>
 </div>
 </div>
+</br>
 <div class = "row">
 <div class = "column">
 <div class = "square">
-<i class="fa fa-github" style="font-size:48px;color:red;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" align = "center"></i>
+<i class="fa fa-github" style="font-size:10vh;color:red;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" align = "center"></i>
 </div>
 </div>
 <div class = "column">
-</br></br>
 <a href = "https://github.com/prajwalm12/" style="text-decoration:none;color: darkblue;" target = "_blank">https://github.com/prajwalm12/</a>
 </div>
 </div>
+</br>
 <div class = "row">
 <div class = "column">
 <div class = "square">
-<i class="fa fa-linkedin-square" style="font-size:48px;color:red" align = "center"></i>
+<i class="fa fa-linkedin-square" style="font-size:10vh;color:red" align = "center"></i>
 </div>
 </div>
 <div class = "column">
-</br></br>
 <a href = "https://www.linkedin.com/in/sai-prajwal-reddy-35395210b/" style="text-decoration:none;color: darkblue;" target = "_blank">https://www.linkedin.com/in/sai-prajwal-reddy-35395210b/</a>
 </div>
 </div>

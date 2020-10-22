@@ -1,0 +1,48 @@
+#contact {
+    background-color: white;    
+    width: 100%;
+}
+.column {
+  float: left;
+  width: 20.33%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.square {
+    background: #F0F0F0;
+    width: 10vw;
+    height: 10vw;
+	position: relative;
+}
+
+.fa-globe {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.fa-mobile {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.fa-database {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.fa-linkedin-square {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}

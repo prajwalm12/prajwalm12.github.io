@@ -1,0 +1,8 @@
+#experince {
+    background: white;     
+    width: 100%;
+}
+.paddingBetweenCols td
+{
+    padding:0 15px;
+}
